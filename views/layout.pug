@@ -1,0 +1,20 @@
+doctype html
+html(lang="pl")
+    head
+        meta(charset="utf-8")
+        link(href="https://fonts.googleapis.com/css?family=McLaren&display=swap", rel="stylesheet")
+        link(rel="stylesheet", type="text/css", href="/css/main.css")
+        block css
+
+        block js
+
+    body
+        .nav-bar
+            a#home.nav-item(href="/performance") Strona główna
+            a#survey.nav-item(href="/ticket") Ankieta
+            a#analysis.nav-item(href="/hall") Analiza ankiety
+            a#logout(href="/logout") Wyloguj
+
+        .content
+            block content
+        
