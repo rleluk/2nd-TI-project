@@ -4,26 +4,26 @@ html(lang="pl")
         meta(charset="utf-8")
         link(href="https://fonts.googleapis.com/css?family=McLaren&display=swap", rel="stylesheet")
         link(rel="stylesheet", type="text/css", href="/css/login.css")
-        title Projekt 2
 
     body
         .content
             #nav-bar
-                    a(href='/register') Rejestracja
+                    a(href='/') Logowanie
 
             #alert
                 if errors && errors.login
                     p #{errors.login.msg}
                 if errors && errors.password
                     p #{errors.password.msg}
-                if notFound
-                    p Nie znaleziono takiego użytkownika.
+                if errors && errors.passwordConfirmation
+                    p #{errors.passwordConfirmation.msg}
                 if message
                     p #{message}
-
+            
             #form
-                form(action='/login', method='POST')
+                form(action='/register', method='POST')
                     .input-wrapper
                         input(type="text", name="login", placeholder="Login") 
                         input(type="password", name="password", placeholder="Hasło")
-                    button#submit-btn(type="submit") Zaloguj
+                        input(type="password", name="passwordConfirmation", placeholder="Powtórz hasło")
+                    button#submit-btn(type="submit") Zarejestruj 

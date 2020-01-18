@@ -1,4 +1,28 @@
 extends layout.pug
 
 block content
+    .content
+        .charts
+            #chart
+
+        .survey-answers
+            table
+                tr
+                    th Płeć
+                    th Preferowany gatunek muzyki
+                    th Ulubiony wykonawca
+                    th Ulubiony utwór
+                    th Częstość słuchania muzyki
+                    th Data oddania głosu
+                        
+                each answer in answers
+                    tr  
+                        td #{answer.sex}
+                        td #{answer.genre}
+                        td #{answer.artist}
+                        td #{answer.piece}
+                        td #{answer.listeningTime}
+                        td #{new Date(answer.date)}
+
+    script(type="text/javascript" src="https://www.gstatic.com/charts/loader.js")
     script(src="/js/analysis.js")    

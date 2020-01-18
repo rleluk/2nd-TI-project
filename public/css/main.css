@@ -4,10 +4,11 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'McLaren', cursive;
+    background-color: #fff;
 }
 
-
 .nav-bar {
+    z-index: 1;
     color: #fff;
     padding: 0px;
     text-transform: uppercase;
@@ -28,7 +29,7 @@ html, body {
     color: #ebc934; }
 
 .nav-bar .active-nav {
-    background-color: #eee;
+    background-color: #fff;
     color: #222930; 
 }
 
@@ -39,3 +40,91 @@ html, body {
 .nav-bar #logout {
     float: right; 
 }   
+
+.content {
+    padding-top: 70px;
+    text-align: center;
+}
+
+form#surveyForm input,
+form#surveyForm select  {
+    font-family: 'McLaren', cursive;
+    border-radius: 5px;
+    margin: 30px auto;
+    display: block;
+    padding: 5px;
+    font-size: 16px;
+}
+
+form#surveyForm input {
+    width: 300px;
+    height: 26px;
+}
+
+form#surveyForm select {
+    width: 320px;
+    height: 40px;
+}
+
+
+form#surveyForm label {
+    display: block;
+}
+
+form#surveyForm #submit-btn {
+    width: 100px;
+    height: 30px;
+    left: calc(50% - 50px);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0b6623; 
+    cursor: pointer;
+}
+
+form#surveyForm #submit-btn:hover {
+    background-color: #708238; 
+}
+
+.survey-answers {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.survey-answers table {
+    border-collapse: collapse;
+}
+
+.survey-answers td {
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.survey-answers th {
+    background-color: #222930;
+    color: #eee;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.survey-answers tr:nth-child(even) {
+    background-color: #999;
+}
+
+.survey-answers tr:nth-child(odd) {
+    background-color: #777;
+}
+
+.charts #chart {
+    width: 600px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.doc {
+    text-align: justify;
+    padding: 20px;
+    margin: 20px;
+}

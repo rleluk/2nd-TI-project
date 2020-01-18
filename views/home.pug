@@ -1,4 +1,18 @@
 extends layout.pug
 
 block content
+    .doc
+        h3 Dokumentacja projektu
+        p Tematem aplikacji jest prosty program do zbierania danych ankietowych.
+        p W trybie offline (bez połączenia z serwerem) dane ankietowe po zatwierdzeniu przechowywane są w lokalnej bazie danych dostępnej w przeglądarce. 
+            | W trybie online (połączenie z serwerem) następuje przesłanie danych klienta do serwisu (dane lokalne po zapisaniu w serwisie są usuwane).
+            | Przesłanie danych realizowane jest automatycznie - po połączeniu z serwerem aplikacja sama przesyła dane.
+            | Program w trybie online posiada również możliwość analizy danych.
+        p Wykorzystane technologie:
+        ul
+            li node.js oraz express.js
+            li MongoDB
+            li PUG
+            li HTML, CSS, JavaScript
+
     script(src="/js/home.js")    

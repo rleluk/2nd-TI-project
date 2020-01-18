@@ -4,17 +4,27 @@ html(lang="pl")
         meta(charset="utf-8")
         link(href="https://fonts.googleapis.com/css?family=McLaren&display=swap", rel="stylesheet")
         link(rel="stylesheet", type="text/css", href="/css/main.css")
+        link(rel="stylesheet", type="text/css", href="/css/modal.css")
+        title Projekt 2
         block css
 
+        script(src="/js/utils.js")    
         block js
 
     body
+        .modal
+            .modal-content
+                span.close &times;
+                .modal-body
+            
         .nav-bar
-            a#home.nav-item(href="/performance") Strona główna
-            a#survey.nav-item(href="/ticket") Ankieta
-            a#analysis.nav-item(href="/hall") Analiza ankiety
+            a#home.nav-item(href="/home") Strona główna
+            a#survey.nav-item(href="/survey") Ankieta
+            a#analysis.nav-item(href="/analysis") Analiza ankiety
             a#logout(href="/logout") Wyloguj
 
         .content
             block content
-        
+
+        script(type="text/javascript" src="/js/browserdb.js")
+        script(src="/js/modal.js")  

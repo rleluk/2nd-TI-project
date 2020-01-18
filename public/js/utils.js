@@ -6,3 +6,4 @@ function setVisibleNav(currentNav) {
 
     currentNav.classList.add('active-nav');
 }
+

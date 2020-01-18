@@ -1,4 +1,25 @@
 extends layout.pug
 
 block content
+    .content
+        form#surveyForm(name="surveyForm")
+            label Twoja płeć
+            select#sex
+                option mężczyzna
+                option kobieta
+            label Jaki gatunek muzyki preferujesz?
+            input(type="text", name="genre")
+            label Twój ulubiony wykonawca?
+            input(type="text", name="artist")
+            label Twój ulubiony utwór?
+            input(type="text", name="piece")
+            label Jak często czynnie i świadomie (nie w tle czynności) słuchasz muzyki?
+            select#listeningTime  
+                option codziennie
+                option 2-3 razy w tygodniu
+                option parę razy w miesiącu
+                option kilka razy w roku
+                option nigdy
+            button#submit-btn(type="submit") Zagłosuj
+
     script(src="/js/survey.js")    
